@@ -58,6 +58,7 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
         if(!userDetails.isEnabled()) {
             return RespBean.error("账号被禁用，请联系管理员！");
         }
+
         //更新security登录用户对象
         UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
         SecurityContextHolder.getContext().setAuthentication(authenticationToken);
@@ -68,7 +69,7 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
         tokenMap.put("token", token);
         tokenMap.put("tokenHead", tokenHead);
 
-        return RespBean.success("登录成功",tokenMap);
+        return RespBean.success("登录成功", tokenMap);
     }
 
     /**
