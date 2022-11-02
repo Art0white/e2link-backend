@@ -7,8 +7,8 @@ spring:
     datasource:
         driver-class-name: com.mysql.cj.jdbc.Driver
         url: jdbc:mysql://rm-bp1408aucroje0sq28o.mysql.rds.aliyuncs.com:3306/e2link_db?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
-        username: gravity
-        password: Gravity=lmx
+        username: .163gravity
+        password: Gravity=lmx++
         hikari:
             # 连接池名
             pool-name: DateHikariCP
